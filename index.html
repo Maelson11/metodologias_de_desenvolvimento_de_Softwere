@@ -3,26 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Título com Informações</title>
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            position: fixed;
+            z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+        }
+
+        .container {
+            position: relative;
+            z-index: 1; /* Certifica-se de que o conteúdo fica acima do vídeo */
+            text-align: center;
+            padding: 20px;
+            color: black; /* Adicionado para definir a cor do texto como preta */
+        }
+
+        .title-info {
+            display: none;
+        }
+
+        .title:hover .title-info {
+            display: block;
+        }
+       
+    </style>
 </head>
 <body>
-    <center><h1> Desenvolvimento Orientado a Testes</h1></center>
+    <video autoplay muted loop>
+        <source src="grey_geometric.mov" type="video/mp4">
+    </video>
 
-<h2>O Desenvolvimento Orientado a Testes (TDD) é uma metodologia de desenvolvimento de software que coloca a ênfase na criação de testes automatizados antes da implementação do código. O TDD segue um ciclo de desenvolvimento iterativo, composto por três fases principais: "vermelho", "verde" e "refatoração".</h2>
-    <h1>Os três tipos de fases</h1>
+    <div class="container">
+        <div id="title-content">
+            <h1 style="color: rgb(0, 0, 0); font-size: 50px;">Desenvolvimento orientado de testes</h1>
+        </div>
 
-<H2>1. Fase Vermelha (Red):</H2>
-<h3>Objetivo: Escrever um teste automatizado que irá falhar inicialmente.</h3>
-<h3>Ação: O desenvolvedor cria um teste que define a funcionalidade desejada ou especificação.</h3>
-<h3>Resultado Esperado: O teste deve falhar, indicando que a funcionalidade ainda não foi implementada.</h3>
-<h2>2. Fase Verde (Green):</h2>
-<h3>Objetivo: Escrever o código mínimo necessário para fazer o teste passar.</h3>
-<h3>Ação: O desenvolvedor implementa o código que atende aos requisitos do teste.</h3>
-<h3>Resultado Esperado: O teste deve passar, indicando que a funcionalidade foi corretamente implementada.</h3>
-<h2>3. Fase de Refatoração (Refactor):</h2>
-<h3>Objetivo: Melhorar a estrutura do código sem alterar seu comportamento externo.</h3>
-<h3>Ação: O desenvolvedor ajusta o código para torná-lo mais eficiente, legível ou modular.</h3>
-<h3>Resultado Esperado: Os testes devem continuar passando após a refatoração.</h3>
+        <h2>Adotar o Desenvolvimento Orientado a Testes (TDD) pode apresentar desafios iniciais para desenvolvedores menos experientes devido à sua curva de aprendizado. A prática de criar testes antes da implementação, embora benéfica a longo prazo, pode gerar um overhead inicial no tempo de desenvolvimento. Além disso, a aplicação do TDD em projetos legados sem cobertura de teste pode ser difícil. Apesar desses desafios, os benefícios do TDD incluem confiança no código, feedback rápido, design incremental e facilidade de manutenção, tornando-o uma prática valiosa na cultura ágil de desenvolvimento de software.</h2>
 
+        <center><img src="unnamed.png" alt="Descrição da imagem"></center>
+
+        <div id="title-content">
+            <h1 style="color: rgb(0, 0, 0); font-size: 40px;">As três Fases</h1>
+        </div>
+
+        <div class="title" data-info="">
+            <h3>Fase Vermelha (Red):</h3>
+            <div class="title-info">
+                <p>Objetivo: Escrever um teste automatizado que irá falhar inicialmente.</p>
+                <p>Ação: O desenvolvedor cria um teste que define a funcionalidade desejada ou especificação.</p>
+                <p>Resultado Esperado: O teste deve falhar, indicando que a funcionalidade ainda não foi implementada.</p>
+            </div>
+        </div>
+
+        <!-- Restante do seu conteúdo HTML aqui... -->
+
+        <div class="title" data-info="">
+            <h3>Fase Verde (Green):</h3>
+            <div class="title-info">
+                <p>Objetivo: Escrever o código mínimo necessário para fazer o teste passar.</p>
+                <p>Ação: O desenvolvedor implementa o código que atende aos requisitos do teste.</p>
+                <p>Resultado Esperado: O teste deve passar, indicando que a funcionalidade foi corretamente implementada.</p>
+            </div>
+        </div>
+
+        <div class="title" data-info="">
+            <h3>Fase de Refatoração (Refactor):</h3> 
+            <div class="title-info">
+                <p>Objetivo: Melhorar a estrutura do código sem alterar seu comportamento externo.</p>
+                <p>Ação: O desenvolvedor ajusta o código para torná-lo mais eficiente, legível ou modular.</p>
+                <p>Resultado Esperado: Os testes devem continuar passando após a refatoração.</p>
+            </div>
+        </div>
+
+        <div class="title" data-info="">
+            <h3>Benefícios do TDD:</h3>
+            <div class="title-info">
+                <ul>
+                    <p>Confiança no Código: Os testes automatizados fornecem confiança de que o código funciona conforme esperado.</p>
+                    <p>Rápido Feedback: A detecção imediata de erros permite correções rápidas, reduzindo o tempo e o custo de correção.</p>
+                    <p>Design Incremental: O desenvolvimento é guiado pelos requisitos do teste, promovendo um design modular e incremental.</p>
+                    <p>Documentação Atualizada: Os testes servem como documentação executável, descrevendo como o código deve ser usado.</p>
+                    <p>Facilidade de Manutenção: O código bem testado é mais fácil de manter, permitindo alterações com menos riscos de introduzir bugs.</p>
+                    <p>Facilita a Colaboração: Testes claros e definidos facilitam a colaboração entre membros da equipe.</p>
+                </ul>
+            </div>
+        </div>
+
+        <div class="title" data-info="">
+            <h3>Desafios do TDD:</h3>
+            <div class="title-info">
+                <ul>
+                    <p>Curva de Aprendizado: Inicialmente, pode ser desafiador adotar a prática do TDD, especialmente para desenvolvedores menos experientes.</p>
+                    <p>Overhead Inicial: A criação de testes antes da implementação pode parecer aumentar o tempo inicial de desenvolvimento.</p>
+                    <p>Adaptação em Projetos Legados: Pode ser difícil aplicar TDD a projetos existentes sem cobertura de teste.</p>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+   
+   <center> <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAF59_xvLj8&#x2F;watch?utm_content=DAF59_xvLj8&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">desenvolvimento orinetado de testes.</a></center>
+
+<script src="script.js"></script>
+
+<h2>O TDD é uma abordagem valiosa para melhorar a qualidade do código, acelerar o desenvolvimento e facilitar a manutenção do software. Embora a curva de aprendizado possa ser desafiadora, os benefícios a longo prazo compensam os investimentos iniciais. A prática do TDD é uma parte integral da cultura de desenvolvimento ágil e é amplamente adotada em equipes de desenvolvimento de software modernas.</h2>
+
+<a class="reference" href="https://chat.openai.com/share/2a297607-d9f3-4139-ab0a-4377f7dae958">ChatGPT</a><br>
+  <h4 style="color:rgb(0, 0, 0);">Alunos: Guilherme Mesquita e Elson Mauricio</h4>
+  <h4 style="color:black;">Curso:PI</h4>
 </body>
 </html>

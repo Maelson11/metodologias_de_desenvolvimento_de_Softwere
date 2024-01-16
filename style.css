@@ -1,0 +1,39 @@
+/* Estilo básico para o contêiner de informações */
+.info-container {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+/* Estilo para o título */
+.title:hover + .info-container {
+    display: block;
+}
+
+
+
+/* styles.css */
+body {
+    background-image: url('caminho/da/imagem.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title-content{
+    font-size:50px ;
+
+}
+
+
+
+body {
+    background-image: url('caminho/para/sua/imagem.jpg');
+    background-size: cover; /* ou 'contain', dependendo de como você quer que a imagem seja exibida */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
